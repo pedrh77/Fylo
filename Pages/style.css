@@ -1,0 +1,271 @@
+/*--------- Configuração geral ---------*/
+:root {
+    /* Primaria */
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+    /* Neutras */
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+body {
+    border: 0px;
+    margin: 0px;
+    height: 100vh;
+    font-family: 'Raleway';
+    background-color: var(--Dark-Blue);
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size:100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------- Configuração 1 balão ---------*/
+header {
+    box-shadow: 0 2px 5px 0 rgba(32, 7, 255, 0.111), 0 2px 10px 0 rgba(0, 0, 0, 0.35);
+    margin: 100px auto 0px;
+    background-color: var(--Dark-Blue);
+    width: 400px;
+    height: 180px;
+    border-radius: 9px 100px 9px 9px;
+    border-top: 100px;
+    position: unset;
+    grid-area: Header;
+
+}
+
+.Logo {
+    margin: 30px 0px 15px 40px;
+
+}
+
+.Buttons .Document {
+    position: relative;
+    top: 4px;
+}
+
+.Folder {
+    position: relative;
+    top: 2px;
+}
+
+.Buttons {
+    margin-left: 30px;
+}
+
+Button {
+    cursor: pointer;
+    background-color: var(--Very-Dark-Blue);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    align-items: flex-start;
+    transition: 300ms;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.Upload {
+    margin: 0px 7px;
+}
+
+button:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.364), 0 2px 10px 0 rgba(0, 0, 0, 0.35);
+}
+
+/*--------- Configuração balão 2 ---------*/
+.Conteudo {
+    margin: auto;
+    text-align: center;
+    height: 150px;
+    width: 400px;
+    background-color: var(--Dark-Blue);
+    border-radius: 9px;
+    margin-top: 10px;
+    grid-area: Conteudo;
+    box-shadow: 0 2px 5px 0 rgba(32, 7, 255, 0.179), 0 2px 10px 0 rgba(0, 0, 0, 0.35);
+
+}
+
+.Conteudo p {
+    margin-top: 20px;
+}
+
+label {
+    word-spacing: 205px
+}
+
+/*--------- Configuração barra de progresso ---------*/
+@keyframes Exemplo {
+    from {
+        background-size: 0px 15px;
+    }
+
+    to {
+        background-size: 235px 15px;
+    }
+}
+
+.range {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 5s;
+    -webkit-appearance: none;
+    width: 290px;
+    height: 10px;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 50%)) 80%;
+    background-position: left;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    background-size: 0px 15px;
+    background-color: hsla(12, 5%, 19%, 0.582);
+    outline: none;
+    transition: 200ms;
+    animation-name: Exemplo;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #f9f9f9;
+    position: relative;
+    z-index: 3;
+}
+
+label {
+    text-justify: center;
+}
+
+
+/*--------- Configuração 3 balão ---------*/
+.ballon {
+    margin: 20px auto;
+    background-color: #ffffff;
+    color: black;
+    width: 170px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.ballon h1 {
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 15px;
+    font-size: 40px;
+}
+
+.ballon h5 {
+    position: absolute;
+    margin-top: 35px;
+    font-size: 20px;
+    margin-left: 85px;
+}
+
+/* Responsividade */
+@media screen and (min-width:1200px) {
+
+    /* Configurações gerais */
+    body {
+        display: grid;
+        grid-template-areas: 'Header Conteudo';
+        background-color: var(--Very-Dark-Blue);
+        background-image: url(../images/bg-desktop.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+
+    /* Primeiro Balão */
+    header {
+        position: absolute;
+        left: 210px;
+        top: 172px;
+        width: 320px;
+        margin: 100px auto;
+    }
+
+    /* 2 balão */
+    .Conteudo {
+        position: absolute;
+        left: 560px;
+        top: 310px;
+        height: 140px;
+        width: 600px;
+        margin: 1px auto;
+    }
+
+    .Conteudo p {
+        text-align: left;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    /* Barra de progresso */
+    label {
+        word-spacing: 390px
+    }
+
+    @keyframes FullScreen {
+        to {
+            background-size: 390px 15px;
+        }
+    }
+
+    .range {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 80%;
+        height: 15px;
+        border-radius: 10px;
+        background-color: hsla(12, 5%, 19%, 0.666);
+        background: linear-gradient hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+        outline: none;
+        background-size: 0px 15px;
+        animation-name: FullScreen;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-fill-mode: both;
+    }
+
+    .range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        background: #ffffff;
+    }
+
+    /* Balão de info "185 GB left" */
+    .ballon {
+        width: 200px;
+        position: absolute;
+        top: -80px;
+        right: 70px;
+    }
+
+    .ballon:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 20px solid transparent;
+        border-top: 25px solid #ffffff;
+        top: 81px;
+        left: 90%;
+    }
+
+    /* Footer */
+    .attribution a {
+        color: hsl(206, 100%, 50%);
+    }
+}

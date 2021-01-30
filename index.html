@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Fonte usada -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <link rel="stylesheet" href="Pages/style.css">
+
+
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="page">
+      <img class="Logo" src="images/logo.svg">
+      <div class="Buttons">
+        <button class="Document"><img src="images/icon-document.svg" alt="Document"></button>
+        <button class="Upload"><img src="images/icon-upload.svg" alt="Document"></button>
+        <button class="Folder"><img src="images/icon-folder.svg" alt="Document"></button>
+      </div>
+  </header>
+
+  <div class="Conteudo">
+    <p>You’ve used <b>815 GB</b> of your storage </p>
+
+    <input type="range" min="0" max="11" value="9" step="1" id="range" class="range"><br>
+    <label for="range"><b></b>0GB 1000GB </b></label>
+    <div class="ballon">
+      <h1>185 <h5>GB left</h5>
+      </h1>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    Coded by <a href="https://github.com/pedrh77">Pedro Santos</a>.
+  </div>
+  </div>
+  <script>
+    // block the range in value 9!
+    document.getElementById("range").disabled = true;
+  </script>
+</body>
+
+</html>
