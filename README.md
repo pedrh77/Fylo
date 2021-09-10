@@ -4,7 +4,7 @@
 
 ## Welcome! 👋
 ## Link:
-Fylo from user [Pedrh77](https://pedrh77.github.io/Fylo/)
+### Fylo from user [Pedrh77 - Click Here](https://pedrh77.github.io/Fylo/)
 
 
 Thanks for checking out this front-end coding challenge.
